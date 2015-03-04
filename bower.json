@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "modernizr": "~2.8.1",
-    "susy": "~2.2.2"
+    "susy": "~2.2.2",
+    "breakpoint-sass": "~2.5.0"
   }
 }

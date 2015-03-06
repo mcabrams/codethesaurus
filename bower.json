@@ -6,6 +6,7 @@
     "modernizr": "~2.8.1",
     "susy": "~2.2.2",
     "breakpoint-sass": "~2.5.0",
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "bourbon": "~4.2.1"
   }
 }

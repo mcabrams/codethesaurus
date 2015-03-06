@@ -1,0 +1,22 @@
+.main-container {
+  @include container;
+}
+
+.hero-callout {
+  @include clearfix;
+  display: flex;
+  align-items: center;
+  width: span(10);
+  margin: 0 auto;
+}
+
+.hero-image-container {
+  @include span(6);
+}
+
+.hero-copy-container {
+  @include span(4);
+}
+
+.hero-copy {
+}

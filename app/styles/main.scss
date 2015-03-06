@@ -3,11 +3,20 @@
 @import "bower_components/susy/sass/_susy.scss";
 @import "bower_components/sassy-maps/sass/_sassy-maps.scss";
 @import "bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 // endbower
+
+$susy: (
+  columns: 12,
+  global-box-sizing: border-box,
+  use-custom: (
+    rem: true,
+    box-sizing: false
+  )
+);
 
 @import "base/base.scss";
 @import "layouts/layouts.scss";
 @import "mixins-and-extends/mixins-and-extends.scss";
 @import "modules/modules.scss";
 @import "variables/variables.scss";
-

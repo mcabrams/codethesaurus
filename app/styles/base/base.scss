@@ -1,3 +1,12 @@
+@font-face{
+	font-family: 'Pier Sans';
+	src: url('../fonts/pier-webfont.eot');
+	src: url('../fonts/pier-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/pier-webfont.woff') format('woff'),
+	     url('../fonts/pier-webfont.ttf') format('truetype'),
+	     url('../fonts/pier-webfont.svg#webfont') format('svg');
+}
+
 html {
   box-sizing: border-box;
 }
@@ -7,12 +16,38 @@ html {
 }
 
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: white;
+  font-family: "Pier Sans", Helvetica, Arial, sans-serif;
   color: #333;
 }
 
-html, body, main, .main-container {
+html,
+body,
+main,
+.main-container {
   height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: desaturate( lighten( #77B6EA, 30% ), 10% );
+}

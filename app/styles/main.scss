@@ -4,7 +4,19 @@
 @import "bower_components/sassy-maps/sass/_sassy-maps.scss";
 @import "bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
 @import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "bower_components/modular-scale/stylesheets/_modular-scale.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_calc.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_function-list.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_function.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_generate-list.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_pow.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_ratios.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_respond.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_round-px.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_sort-list.scss";
+@import "bower_components/modular-scale/stylesheets/modular-scale/_tests.scss";
 // endbower
+@import "bower_components/typeplate-starter-kit/scss/_typeplate.scss";
 
 $susy: (
   columns: 12,
@@ -15,8 +27,9 @@ $susy: (
   )
 );
 
+@import "variables/variables.scss";
+
 @import "base/base.scss";
 @import "layouts/layouts.scss";
 @import "mixins-and-extends/mixins-and-extends.scss";
 @import "modules/modules.scss";
-@import "variables/variables.scss";

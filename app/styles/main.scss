@@ -1,5 +1,4 @@
 // bower:scss
-@import "/bower_components/normalize.css/normalize.css";
 @import "bower_components/susy/sass/_susy.scss";
 @import "bower_components/sassy-maps/sass/_sassy-maps.scss";
 @import "bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
@@ -16,7 +15,6 @@
 @import "bower_components/modular-scale/stylesheets/modular-scale/_sort-list.scss";
 @import "bower_components/modular-scale/stylesheets/modular-scale/_tests.scss";
 // endbower
-@import "bower_components/typeplate-starter-kit/scss/_typeplate.scss";
 
 $susy: (
   columns: 12,

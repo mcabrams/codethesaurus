@@ -8,7 +8,6 @@
     "breakpoint-sass": "~2.5.0",
     "normalize.css": "~3.0.2",
     "bourbon": "~4.2.1",
-    "modular-scale": "~2.0.7",
-    "typeplate-starter-kit": "~2.1.0"
+    "modular-scale": "~2.0.7"
   }
 }

@@ -7,6 +7,9 @@
 	     url('../fonts/pier-webfont.svg#webfont') format('svg');
 }
 
+$ms-base: 1em;
+$ms-ratio: $golden;
+
 html {
   box-sizing: border-box;
 }
@@ -35,6 +38,16 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: ms(2);
+}
+
+h2 {
+  font-size: ms(1);
 }
 
 ul {

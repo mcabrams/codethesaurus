@@ -1,5 +1,5 @@
-#Sweats
-*A prototype of a storefront for awesome sweatpants*
+#Codethesaur.us
+*A prototype of a code thesaurus*
 
 ----------
 

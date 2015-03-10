@@ -29,6 +29,11 @@ $delta-font-size: ms(-2);
 $epsilon-font-size: ms(-3);
 $zeta-font-size: ms(-4);
 
+/* $ms-range: */
+  /* 0.6 $bp1, */
+  /* 0.8 $bp2, */
+  /* 1.0 $bp3; */
+
 /* $base-size-unitless: strip-unit($base-size-rem); */
 
 /* $micro-unitless:     strip-unit($micro-rem); */
@@ -82,27 +87,77 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: $medium-spacing;
+  @include extra-large-spacing(margin-bottom);
 }
 
 h1 {
-  font-size: $tera-font-size;
+  @include breakpoint($small-bp-query) {
+    font-size: 0.4 * ms(4);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    font-size: 0.8 * ms(4);
+  }
+
+  @include breakpoint($large-bp-query) {
+    font-size: 1.0 * ms(4);
+  }
 }
 
 h2 {
-  font-size: $mega-font-size;
+  @include breakpoint($small-bp-query) {
+    font-size: 0.6 * ms(3);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    font-size: 0.8 * ms(3);
+  }
+
+  @include breakpoint($large-bp-query) {
+    font-size: 1.0 * ms(3);
+  }
 }
 
 h3 {
-  font-size: $alpha-font-size;
+  @include breakpoint($small-bp-query) {
+    font-size: 0.6 * ms(2);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    font-size: 0.8 * ms(2);
+  }
+
+  @include breakpoint($large-bp-query) {
+    font-size: 1.0 * ms(2);
+  }
 }
 
 h4 {
-  font-size: $beta-font-size;
+  @include breakpoint($small-bp-query) {
+    font-size: 0.6 * ms(1);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    font-size: 0.8 * ms(1);
+  }
+
+  @include breakpoint($large-bp-query) {
+    font-size: 1.0 * ms(1);
+  }
 }
 
 h5 {
-  font-size: $gamma-font-size;
+  @include breakpoint($small-bp-query) {
+    font-size: 0.6 * ms(0);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    font-size: 0.8 * ms(0);
+  }
+
+  @include breakpoint($large-bp-query) {
+    font-size: 1.0 * ms(0);
+  }
 }
 
 ul {

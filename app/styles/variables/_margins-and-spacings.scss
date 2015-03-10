@@ -3,3 +3,60 @@ $tiny-spacing: ms(-2);
 $small-spacing: ms(-1);
 $medium-spacing: ms(0);
 $large-spacing: ms(1);
+$extra-large-spacing: ms(2);
+
+@mixin extra-large-spacing($property) {
+  @include breakpoint($small-bp-query) {
+    #{$property}: 0.6 * ms(2);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    #{$property}: 0.8 * ms(2);
+  }
+
+  @include breakpoint($large-bp-query) {
+    #{$property}: 1.0 * ms(2);
+  }
+}
+
+@mixin large-spacing($property) {
+  @include breakpoint($small-bp-query) {
+    #{$property}: 0.6 * ms(1);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    #{$property}: 0.8 * ms(1);
+  }
+
+  @include breakpoint($large-bp-query) {
+    #{$property}: 1.0 * ms(1);
+  }
+}
+
+@mixin medium-spacing($property) {
+  @include breakpoint($small-bp-query) {
+    #{$property}: 0.6 * ms(0);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    #{$property}: 0.8 * ms(0);
+  }
+
+  @include breakpoint($large-bp-query) {
+    #{$property}: 1.0 * ms(0);
+  }
+}
+
+@mixin small-spacing($property) {
+  @include breakpoint($small-bp-query) {
+    #{$property}: 0.6 * ms(-1);
+  }
+
+  @include breakpoint($medium-bp-query) {
+    #{$property}: 0.8 * ms(-1);
+  }
+
+  @include breakpoint($large-bp-query) {
+    #{$property}: 1.0 * ms(-1);
+  }
+}

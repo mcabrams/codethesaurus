@@ -1,6 +1,10 @@
 $default-border-radius: 5px;
 $default-border-size: 1px;
-$small-bp: max-width 500px;
-$medium-bp: 501px 1159px;
-$small-medium-bp: max-width 500px, 501px 1159px;
-$large-bp: 1160px;
+
+$bp1: 500px;
+$bp2: 1160px;
+
+$small-bp-query: max-width $bp1;
+$medium-bp-query: ($bp1 + 1px) ($bp2 - 1px);
+$small-medium-bp-query: max-width $bp1, ($bp1 + 1px) ($bp2 - 1px);
+$large-bp-query: $bp2;

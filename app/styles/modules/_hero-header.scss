@@ -1,0 +1,17 @@
+.hero-header {
+  padding: $large-spacing 0;
+  background-image: url("../images/dictionary.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+  color: $white-color;
+
+  .hero-headline {
+    @extend h1;
+  }
+
+  .hero-tagline {
+    @extend h4;
+  }
+}

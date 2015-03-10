@@ -16,6 +16,7 @@ $double-text-input-label-line-height: 1.2;
   button {
     font-size: $mega-font-size;
     padding: $medium-spacing;
+    max-width: 100%;
     /* border: 0; */
     /* border-bottom: 1px $default-border-color solid; */
     /* margin-right: $medium-spacing; */
@@ -27,56 +28,64 @@ $double-text-input-label-line-height: 1.2;
     -moz-appearance: none;
   }
 
-  button {
-    margin-top: $alpha-font-size * $double-text-input-label-line-height + $medium-spacing;
+  @include breakpoint($small-medium-bp) {
+    .input-wrap {
+      margin-bottom: $large-spacing;
+    }
   }
 
-  .input-wrap {
-    float: left;
+  @include breakpoint($large-bp) {
+    .input-wrap {
+      float: left;
 
-    &:first-of-type {
-      input[type=text],
-      select,
       button {
-        @include border-right-radius(0px);
+        margin-top: $alpha-font-size * $double-text-input-label-line-height + $medium-spacing;
+      }
+
+      &:first-of-type {
+        input[type=text],
+        select,
+        button {
+          @include border-right-radius(0px);
+        }
+      }
+
+      &:last-of-type {
+        margin-left: -$default-border-size;
+        input[type=text],
+        select,
+        button {
+          @include border-left-radius(0px);
+        }
+      }
+
+      &:not(:first-of-type):not(:last-of-type) {
+        margin-left: -$default-border-size;
+        input[type=text],
+        select,
+        button {
+          border-radius: 0;
+        }
       }
     }
 
-    &:last-of-type {
-      margin-left: -$default-border-size;
+    .input-wrap {
+      width: 27%;
       input[type=text],
       select,
+      option,
       button {
-        @include border-left-radius(0px);
+        width: 100%;
       }
     }
 
-    &:not(:first-of-type):not(:last-of-type) {
-      margin-left: -$default-border-size;
-      input[type=text],
-      select,
-      button {
-        border-radius: 0;
-      }
+    .to-language-input-wrap,
+    .from-language-input-wrap {
+      width: 13%;
     }
-  }
 
-  .input-wrap {
-    width: 27%;
-    input[type=text],
-    select,
-    option,
-    button {
-      width: 100%;
+    .go-input-wrap {
+      width: 20%;
     }
-  }
-
-  .to-language-input-wrap,
-  .from-language-input-wrap {
-    width: 13%;
-  }
-
-  .go-input-wrap {
-    width: 20%;
   }
 }

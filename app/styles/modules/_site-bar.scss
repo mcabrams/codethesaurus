@@ -11,14 +11,20 @@
 .site-bar-nav-links,
 .site-bar-logo {
   line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .site-bar-nav-links {
-  line-height: strip-units(ms(1));
+  line-height: strip-units($alpha-font-size);
+
+  a {
+    color: $white-color;
+  }
 }
 
 .site-bar-logo {
-  @extend h3;
+  font-size: $alpha-font-size;
   float: left;
   color: $main-bar-color;
 }

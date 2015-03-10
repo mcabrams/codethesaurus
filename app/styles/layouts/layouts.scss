@@ -10,3 +10,7 @@
 .thesaurus-entry-form {
   @include clearfix;
 }
+
+.double-text-input {
+  margin-bottom: $large-spacing;
+}

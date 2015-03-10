@@ -1,0 +1,25 @@
+.site-bar {
+  @include clearfix;
+  background-color: $main-bar-background-color;
+  padding: $medium-spacing 0;
+
+  nav {
+    float: right;
+  }
+}
+
+.site-bar-nav-links,
+.site-bar-logo {
+  line-height: 1;
+}
+
+.site-bar-nav-links {
+  line-height: strip-units(ms(1));
+}
+
+.site-bar-logo {
+  @extend h3;
+  float: left;
+  color: $main-bar-color;
+}
+

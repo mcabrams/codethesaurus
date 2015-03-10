@@ -3,21 +3,10 @@
   @include container(90%);
 }
 
-.hero-callout {
+.main-container {
+  padding: $medium-spacing 0;
+}
+
+.thesaurus-entry-form {
   @include clearfix;
-  display: flex;
-  align-items: center;
-  width: span(12);
-  margin: 0 auto;
-}
-
-.hero-image-container {
-  @include span(7);
-}
-
-.hero-copy-container {
-  @include span(5 last);
-}
-
-.hero-copy {
 }

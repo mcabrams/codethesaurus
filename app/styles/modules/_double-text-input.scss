@@ -1,0 +1,82 @@
+$double-text-input-label-line-height: 1.2;
+
+.double-text-input {
+  @include clearfix;
+
+  label {
+    font-size: $alpha-font-size;
+    margin-bottom: $medium-spacing;
+    line-height: $double-text-input-label-line-height;
+    color: $less-dark-black-color;
+  }
+
+  input[type=text],
+  select,
+  option,
+  button {
+    font-size: $mega-font-size;
+    padding: $medium-spacing;
+    /* border: 0; */
+    /* border-bottom: 1px $default-border-color solid; */
+    /* margin-right: $medium-spacing; */
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  button {
+    margin-top: $alpha-font-size * $double-text-input-label-line-height + $medium-spacing;
+  }
+
+  .input-wrap {
+    float: left;
+
+    &:first-of-type {
+      input[type=text],
+      select,
+      button {
+        @include border-right-radius(0px);
+      }
+    }
+
+    &:last-of-type {
+      margin-left: -$default-border-size;
+      input[type=text],
+      select,
+      button {
+        @include border-left-radius(0px);
+      }
+    }
+
+    &:not(:first-of-type):not(:last-of-type) {
+      margin-left: -$default-border-size;
+      input[type=text],
+      select,
+      button {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .input-wrap {
+    width: 27%;
+    input[type=text],
+    select,
+    option,
+    button {
+      width: 100%;
+    }
+  }
+
+  .to-language-input-wrap,
+  .from-language-input-wrap {
+    width: 13%;
+  }
+
+  .go-input-wrap {
+    width: 20%;
+  }
+}

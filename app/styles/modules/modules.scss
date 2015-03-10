@@ -1,23 +1,5 @@
-.site-bar {
-  @include clearfix;
-  background-color: $main-bar-background-color;
-  padding: 1rem;
-
-  nav {
-    float: right;
-  }
-}
-
-.site-bar-nav-links {
-  vertical-align: middle;
-}
-
-.site-bar-logo {
-  @extend h4;
-  float: left;
-  color: lighten( $main-bar-color, 80% );
-  margin-bottom: 0;
-}
+@import "_site-bar.scss";
+@import "_double-text-input.scss";
 
 .main {
   @include clearfix;

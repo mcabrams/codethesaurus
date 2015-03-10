@@ -1,0 +1,106 @@
+@font-face {
+	font-family: 'Pier Sans';
+	src: url('../fonts/pier-webfont.eot');
+	src: url('../fonts/pier-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/pier-webfont.woff') format('woff'),
+	     url('../fonts/pier-webfont.ttf') format('truetype'),
+	     url('../fonts/pier-webfont.svg#webfont') format('svg');
+}
+
+// ---------------------------------------------------------------------------
+// Size Settings
+// ---------------------------------------------------------------------------
+
+$target-pixel-size: 18;
+$standard-browser-font-size: 16;
+$html-font-size: $target-pixel-size/$standard-browser-font-size;
+$html-font-size-percent: percentage( $html-font-size );
+
+$ms-base: 1rem;
+$ms-ratio: $golden;
+
+$tera-font-size: ms(4);
+$giga-font-size: ms(3);
+$mega-font-size: ms(2);
+$alpha-font-size: ms(1);
+$beta-font-size: ms(0);
+$gamma-font-size: ms(-1);
+$delta-font-size: ms(-2);
+$epsilon-font-size: ms(-3);
+$zeta-font-size: ms(-4);
+
+/* $base-size-unitless: strip-unit($base-size-rem); */
+
+/* $micro-unitless:     strip-unit($micro-rem); */
+/* $tiniest-unitless:   strip-unit($tiniest-rem); */
+/* $tiny-unitless:      strip-unit($tiny-rem); */
+/* $smallest-unitless:  strip-unit($smallest-rem); */
+/* $smaller-unitless:   strip-unit($smaller-rem); */
+/* $small-unitless:     strip-unit($small-rem); */
+/* $norm-unitless:      strip-unit($norm-rem); */
+/* $large-unitless:     strip-unit($large-rem); */
+/* $larger-unitless:    strip-unit($larger-rem); */
+/* $largest-unitless:   strip-unit($largest-rem); */
+/* $huge-unitless:      strip-unit($huge-rem); */
+/* $epic-unitless:      strip-unit($epic-rem); */
+/* $epicisimo-unitless: strip-unit($epicisimo-rem); */
+
+/* $base-margin-rem: $small-rem; */
+/* $big-break-margin-rem: $huge-rem; */
+/* $base-line-height: $large-unitless; */
+
+// ---------------------------------------------------------------------------
+// Styles
+// ---------------------------------------------------------------------------
+
+body {
+  font-family: "Pier Sans", Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: $html-font-size-percent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: $tera-font-size;
+}
+
+h2 {
+  font-size: $mega-font-size;
+}
+
+h3 {
+  font-size: $alpha-font-size;
+}
+
+h4 {
+  font-size: $beta-font-size;
+}
+
+h5 {
+  font-size: $gamma-font-size;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: desaturate( lighten( #77B6EA, 30% ), 10% );
+}

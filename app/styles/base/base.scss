@@ -1,15 +1,3 @@
-@font-face{
-	font-family: 'Pier Sans';
-	src: url('../fonts/pier-webfont.eot');
-	src: url('../fonts/pier-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('../fonts/pier-webfont.woff') format('woff'),
-	     url('../fonts/pier-webfont.ttf') format('truetype'),
-	     url('../fonts/pier-webfont.svg#webfont') format('svg');
-}
-
-$ms-base: 1em;
-$ms-ratio: $golden;
-
 html {
   box-sizing: border-box;
 }
@@ -20,8 +8,6 @@ html {
 
 body {
   background: white;
-  font-family: "Pier Sans", Helvetica, Arial, sans-serif;
-  color: #333;
 }
 
 html,
@@ -31,36 +17,5 @@ main,
   height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-size: ms(2);
-}
-
-h2 {
-  font-size: ms(1);
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-a,
-a:hover {
-  text-decoration: none;
-}
-
-a {
-  color: desaturate( lighten( #77B6EA, 30% ), 10% );
-}
+@import "_typography.scss";
+@import "_forms.scss";

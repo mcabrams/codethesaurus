@@ -1,0 +1,9 @@
+label {
+  display: block;
+}
+
+button,
+input[type="text"] {
+  border-radius: $default-border-radius;
+  border: $default-border-size solid $default-border-color;
+}

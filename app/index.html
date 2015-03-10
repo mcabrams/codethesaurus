@@ -41,11 +41,41 @@
     <main class="main">
       <div class="main-container">
         <section class="thesaurus-entry">
-          <form action="#">
-            <input type="text">
+          <form class="thesaurus-entry-form" action="#">
+            <div class="double-text-input">
+              <div class="input-wrap from-language-input-wrap">
+                <label for="from-language-input">From</label>
+                <select id="from-language-input">
+                  <option value="js">JS</option>
+                  <option value="ruby">Ruby</option>
+                </select>
+              </div>
+              <div class="input-wrap object-class-input-wrap">
+                <label for="object-class-input">Object/Class</label>
+                <input id="object-class-input" type="text" placeholder="String">
+              </div>
+              <div class="input-wrap method-input-wrap">
+                <label for="method-input">Method</label>
+                <input id="method-input" type="text" placeholder="trim">
+              </div>
+              <div class="input-wrap to-language-input-wrap">
+                <label for="to-language-input">To</label>
+                <select id="to-language-input">
+                  <option value="ruby">Ruby</option>
+                  <option value="js">JS</option>
+                </select>
+              </div>
+              <div class="input-wrap go-input-wrap">
+                <button>Go!</button>
+              </div>
+            </div>
           </form>
         </section>
         <section class="thesaurus-output">
+          <p class="thesaurus-output-preface">
+            <span class="language-output">Ruby</span>'s equivalent to <code><span class="object-class-entry">String</span>.<span class="method-entry">trim</span></code> is:
+          </p>
+          <h3><code>String.rstrip</code></h3>
         </section>
       </div>
     </main>

@@ -15,8 +15,8 @@ $double-text-input-label-line-height: 1.2;
   option,
   button {
     @extend h3;
+    @include medium-spacing(padding);
     margin-bottom: 0;
-    padding: $medium-spacing;
     max-width: 100%;
     /* border: 0; */
     /* border-bottom: 1px $default-border-color solid; */

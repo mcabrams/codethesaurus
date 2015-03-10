@@ -1,9 +1,11 @@
 .hero-header {
-  padding: $large-spacing 0;
+  @include $extra-large-spacing(padding);
+  padding-right: 0;
+  padding-left: 0;
   background-image: url("../images/dictionary.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   text-align: center;
   color: $white-color;
 

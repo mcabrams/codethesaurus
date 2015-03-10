@@ -1,3 +1,5 @@
 .thesaurus-body {
-  padding: $extra-large-spacing 0;
+  @include $extra-large-spacing(padding);
+  padding-right: 0;
+  padding-left: 0;
 }

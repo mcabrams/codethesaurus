@@ -4,10 +4,6 @@
   @include container(90%);
 }
 
-.main-container {
-  padding: $medium-spacing 0;
-}
-
 .thesaurus-entry-form {
   @include clearfix;
 }

@@ -1,5 +1,14 @@
 .thesaurus-body {
-  @include $extra-large-spacing(padding);
+  @include extra-large-spacing(padding);
   padding-right: 0;
   padding-left: 0;
+}
+
+.thesaurus-output {
+  @include extra-large-spacing(padding);
+  @include default-border;
+
+  .thesaurus-output-class-method {
+    @extend h4;
+  }
 }

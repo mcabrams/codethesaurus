@@ -1,8 +1,16 @@
 $white-color: #fff;
 $dark-black-color: #252525;
-$less-dark-black-color: #666;
+$less-dark-black-color: #444;
+$lesser-dark-black-color: #a9a9a9;
 
-$default-border-color: $dark-black-color;
+$default-border-color: $lesser-dark-black-color;
 
 $main-bar-background-color: $dark-black-color;
 $main-bar-color: $white-color;
+$link-color: #3F7CAC;
+
+$main-background-color: #fff;
+$body-text-color: #444;
+$headline-color: #444;
+$body-text-light-on-dark-color: $white-color;
+$headline-light-on-dark-color: $white-color;

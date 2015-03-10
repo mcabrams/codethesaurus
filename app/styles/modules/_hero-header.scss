@@ -1,5 +1,5 @@
 .hero-header {
-  @include $extra-large-spacing(padding);
+  @include extra-large-spacing(padding);
   padding-right: 0;
   padding-left: 0;
   background-image: url("../images/dictionary.jpg");
@@ -11,9 +11,11 @@
 
   .hero-headline {
     @extend h1;
+    color: $headline-light-on-dark-color;
   }
 
   .hero-tagline {
     @extend h4;
+    color: $headline-light-on-dark-color;
   }
 }

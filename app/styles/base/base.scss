@@ -7,14 +7,17 @@ html {
 }
 
 body {
-  background: white;
+  background: $main-background-color;
 }
 
 html,
 body,
-main,
 .main-container {
   height: 100%;
+}
+
+a {
+  color: $link-color;
 }
 
 @import "_typography.scss";

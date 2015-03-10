@@ -1,0 +1,4 @@
+@mixin default-border {
+  border: $default-border-size $default-border-color solid;
+  border-radius: $default-border-radius;
+}

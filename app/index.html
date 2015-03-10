@@ -42,7 +42,7 @@
       <header class="hero-header">
         <div class="hero-header-container">
           <h2 class="hero-headline">codethesaur.us</h2>
-          <h3 class="hero-tagline">Find the equivalent method in another language.</h3>
+          <h3 class="hero-tagline">Find the same method in a different language.</h3>
         </div>
       </header>
       <section class="thesaurus-body">
@@ -51,11 +51,13 @@
             <form class="thesaurus-entry-form" action="#">
               <div class="double-text-input">
                 <div class="input-wrap from-language-input-wrap">
-                  <label for="from-language-input">From</label>
-                  <select id="from-language-input">
-                    <option value="js">JS</option>
-                    <option value="ruby">Ruby</option>
-                  </select>
+                  <label for="from-language-input">From Lang.</label>
+                  <div class="select-container">
+                    <select id="from-language-input">
+                      <option value="js">JS</option>
+                      <option value="ruby">Ruby</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="input-wrap object-class-input-wrap">
                   <label for="object-class-input">Object/Class</label>
@@ -66,11 +68,13 @@
                   <input id="method-input" type="text" placeholder="trim">
                 </div>
                 <div class="input-wrap to-language-input-wrap">
-                  <label for="to-language-input">To</label>
-                  <select id="to-language-input">
-                    <option value="ruby">Ruby</option>
-                    <option value="js">JS</option>
-                  </select>
+                  <label for="to-language-input">To Lang.</label>
+                  <div class="select-container">
+                    <select id="to-language-input">
+                      <option value="ruby">Ruby</option>
+                      <option value="js">JS</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="input-wrap go-input-wrap">
                   <button>Go!</button>
@@ -82,7 +86,7 @@
             <p class="thesaurus-output-preface">
               <span class="language-output">Ruby</span>'s equivalent to <code><span class="object-class-entry">String</span>.<span class="method-entry">trim</span></code> is:
             </p>
-            <h3><code>String.rstrip</code></h3>
+            <h3 class="thesaurus-output-class-method"><code>String.rstrip</code></h3>
             <a href="#">Did we not get this one quite right? Drop some knowledge.</a>
           </section>
         </div>

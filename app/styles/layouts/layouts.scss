@@ -1,4 +1,3 @@
-.hero-header-container,
 .thesaurus-container,
 .site-bar-container {
   @include container(90%);
@@ -10,4 +9,8 @@
 
 .double-text-input {
   margin-bottom: $large-spacing;
+}
+
+.main {
+  @include clearfix;
 }

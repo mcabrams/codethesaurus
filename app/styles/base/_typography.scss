@@ -1,4 +1,33 @@
 @font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?bz4sl6');
+	src:url('../fonts/icomoon.eot?#iefixbz4sl6') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?bz4sl6') format('woff'),
+		url('../fonts/icomoon.ttf?bz4sl6') format('truetype'),
+		url('../fonts/icomoon.svg?bz4sl6#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-keyboard-arrow-down:before {
+	content: "\e600";
+}
+
+@font-face {
 	font-family: 'Pier Sans';
 	src: url('../fonts/pier-webfont.eot');
 	src: url('../fonts/pier-webfont.eot?#iefix') format('embedded-opentype'),
@@ -75,6 +104,11 @@ h6 {
   padding: 0;
 }
 
+p,
+code {
+  color: $body-text-color;
+}
+
 p {
   margin-top: 0;
   margin-bottom: $small-spacing;
@@ -86,78 +120,38 @@ h3,
 h4,
 h5,
 h6 {
+  color: $headline-color;
   margin-top: 0;
   @include extra-large-spacing(margin-bottom);
 }
 
 h1 {
-  @include breakpoint($small-bp-query) {
-    font-size: 0.4 * ms(4);
-  }
+    @include breakpoint($small-bp-query) {
+      font-size: 0.4 * ms(4);
+    }
 
-  @include breakpoint($medium-bp-query) {
-    font-size: 0.8 * ms(4);
-  }
-
-  @include breakpoint($large-bp-query) {
-    font-size: 1.0 * ms(4);
-  }
+    @include breakpoint($medium-bp-query) {
+      font-size: 0.8 * ms(4);
+    }
+    @include breakpoint($large-bp-query) {
+      font-size: 1.0 * ms(4);
+    }
 }
 
 h2 {
-  @include breakpoint($small-bp-query) {
-    font-size: 0.6 * ms(3);
-  }
-
-  @include breakpoint($medium-bp-query) {
-    font-size: 0.8 * ms(3);
-  }
-
-  @include breakpoint($large-bp-query) {
     font-size: 1.0 * ms(3);
-  }
 }
 
 h3 {
-  @include breakpoint($small-bp-query) {
-    font-size: 0.6 * ms(2);
-  }
-
-  @include breakpoint($medium-bp-query) {
-    font-size: 0.8 * ms(2);
-  }
-
-  @include breakpoint($large-bp-query) {
     font-size: 1.0 * ms(2);
-  }
 }
 
 h4 {
-  @include breakpoint($small-bp-query) {
-    font-size: 0.6 * ms(1);
-  }
-
-  @include breakpoint($medium-bp-query) {
-    font-size: 0.8 * ms(1);
-  }
-
-  @include breakpoint($large-bp-query) {
     font-size: 1.0 * ms(1);
-  }
 }
 
 h5 {
-  @include breakpoint($small-bp-query) {
-    font-size: 0.6 * ms(0);
-  }
-
-  @include breakpoint($medium-bp-query) {
-    font-size: 0.8 * ms(0);
-  }
-
-  @include breakpoint($large-bp-query) {
     font-size: 1.0 * ms(0);
-  }
 }
 
 ul {

@@ -3,11 +3,22 @@ $double-text-input-label-line-height: 1.2;
 .double-text-input {
   @include clearfix;
 
+  .input-wrap {
+    position: relative;
+  }
+
   label {
-    @extend h4;
-    @include medium-spacing(margin-bottom);
+    z-index: 1;
+    font-size: ms(0);
+    margin: 0;
+    position: absolute;
+    left: 1rem;
+    top: -( ms(0) * $double-text-input-label-line-height ) / 2;
+    background: white;
     line-height: $double-text-input-label-line-height;
-    color: $less-dark-black-color;
+    color: #444;
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
   }
 
   input[type=text],
@@ -16,10 +27,11 @@ $double-text-input-label-line-height: 1.2;
   button {
     @extend h3;
     @include medium-spacing(padding);
+    @include default-border;
     margin-bottom: 0;
     max-width: 100%;
+    background: $main-background-color;
     /* border: 0; */
-    /* border-bottom: 1px $default-border-color solid; */
     /* margin-right: $medium-spacing; */
   }
 
@@ -29,19 +41,45 @@ $double-text-input-label-line-height: 1.2;
     -moz-appearance: none;
   }
 
+  .select-container {
+    position: relative;
+    width: 100%;
+    float: left;
+
+    &:after {
+      @extend h4;
+      font-family: "icomoon";
+      content: "\e600";
+      pointer-events: none;
+      position: absolute;
+      right: $small-spacing;
+      top: 50%;
+      margin-top: ms(1) / -2;
+    }
+  }
+
   @include breakpoint($small-medium-bp-query) {
+    width: 100%;
+
+    input[type=text],
+    select,
+    option,
+    button {
+      width: 100%;
+    }
+
     .input-wrap {
       margin-bottom: $large-spacing;
+      float: left;
+      clear: left;
+      max-width: 100%;
+      width: 100%;
     }
   }
 
   @include breakpoint($large-bp-query) {
     .input-wrap {
       float: left;
-
-      button {
-        margin-top: $alpha-font-size * $double-text-input-label-line-height + $medium-spacing;
-      }
 
       &:first-of-type {
         input[type=text],

@@ -21,7 +21,11 @@ Then, to install dependencies, navigate to the root of codethesaurus and run:
 
 ```$ npm install```
 
-Then
+Then:
+
+```$ bower install```
+
+And finally:
 
 ```$ gulp serve```
 
@@ -42,12 +46,15 @@ Done.
 
 <a id="goals"></a>
 #### Goals
-Create a responsive front-end prototype for the *Sweats* store front, and checkout process. Be able to deploy via heroku.
+Create a responsive front-end prototype for the codethesaur.us. Be able to deploy via heroku.
 
 ------
 
 <a id="todo"></a>
 #### Todo
-- [ ] Flesh the todos out... the irony doesn't escape me.
+- [ ] Test deploy on heroku.
+- [ ] Incorporate React for thesaurus functionality.
+- [ ] Add commenting system.
+- [ ] Settle on how fully to commit to responsive typography/spacings.
 
 ----------

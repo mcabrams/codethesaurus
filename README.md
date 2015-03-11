@@ -13,7 +13,15 @@
 <a id="developing-locally"></a>
 #### Developing locally
 
-You wanna develop locally? Cool, run:
+You wanna develop locally? Is this your first time? Make sure you have node and npm installed. If you don't have gulp, go ahead and run:
+
+```$ npm install --global gulp```
+
+Then, to install dependencies, navigate to the root of codethesaurus and run:
+
+```$ npm install```
+
+Then
 
 ```$ gulp serve```
 

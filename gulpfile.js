@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var react = require('gulp-react');
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
@@ -75,7 +76,14 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], function () {
+gulp.task('react', function () {
+    return gulp.src('app/scripts/**/*.jsx')
+        .pipe(react({harmony: true}))
+        .pipe(gulp.dest('.tmp/scripts'))
+        .pipe(reload({stream: true}));
+});
+
+gulp.task('serve', ['styles', 'fonts', 'react'], function () {
   browserSync({
     notify: false,
     port: 9000,
@@ -90,12 +98,12 @@ gulp.task('serve', ['styles', 'fonts'], function () {
   // watch for changes
   gulp.watch([
     'app/*.html',
-    'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/scripts/**/*.js', ['react']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });

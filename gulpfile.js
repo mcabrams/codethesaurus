@@ -7,6 +7,10 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var react = require('gulp-react');
 
+var browserify = require('browserify');
+var source = require("vinyl-source-stream");
+var reactify = require('reactify');
+
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
     .pipe($.sourcemaps.init())
@@ -76,11 +80,14 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('react', function () {
-    return gulp.src('app/scripts/**/*.jsx')
-        .pipe(react({harmony: true}))
-        .pipe(gulp.dest('.tmp/scripts'))
-        .pipe(reload({stream: true}));
+gulp.task('js', function(){
+  var b = browserify();
+  b.transform(reactify); // use the reactify transform
+  b.add('./app/scripts/main.js');
+  return b.bundle()
+    .pipe(source('main.js'))
+    .pipe(gulp.dest('./dist/scripts/'))
+    .pipe(gulp.dest('./.tmp/scripts'));
 });
 
 gulp.task('serve', ['styles', 'fonts', 'react'], function () {
@@ -103,7 +110,7 @@ gulp.task('serve', ['styles', 'fonts', 'react'], function () {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['react']);
+  gulp.watch('app/scripts/**/*.{js,jsx}', ['js']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
@@ -125,7 +132,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function () {
+gulp.task('build', ['jshint', 'js', 'html', 'images', 'fonts', 'extras'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
